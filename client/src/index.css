@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --font-sans: 'Urbanist', sans-serif; 
+
+    /* 1. Superficies y Fondos */
+    --color-background: #FFFFFF;       /* Blanco puro para el lienzo general */
+    --color-surface: #F8FAFC;          /* Gris muy claro para tarjetas */
+    --color-surface-subtle: #F1F5F9;   /* Secciones secundarias */
+
+    /* 2. Tipografía */
+    --color-foreground: #0F172A;       /* Azul casi negro para títulos y texto principal */
+    --color-muted: #64748B;            /* Texto secundario, metadata y descripciones */
+
+    /* 3. Acciones y Marca (TU PALETA DE VETERINARIA) */
+    --color-primary: #EC4899;          /* Fucsia principal (rosa fuerte) */
+    --color-secondary: #06B6D4;        /* Celeste vibrante (cyan) */
+    --color-accent: #F59E0B;           /* Dorado/Ámbar para CTA y detalles */
+    --color-dark: #0F172A;             /* Azul oscuro para fondos contrastantes */
+
+    /* 4. Estados e Interacción */
+    --color-border: #E2E8F0;           /* Bordes suaves y discretos */
+    --color-ring: #EC4899;             /* Focus visible fucsia */
+    --color-success: #10B981;          /* Verde esmeralda */
+    --color-warning: #F59E0B;          /* Ámbar */
+    --color-danger: #EF4444;           /* Rojo vibrante */
+}
+
+@layer base {
+    body{
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+    }
+    p{
+        @apply mb-4;
+    }
+    p:last-child{
+        @apply mb-0;
+    }
+}
